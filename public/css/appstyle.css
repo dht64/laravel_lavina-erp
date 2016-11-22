@@ -1,0 +1,9 @@
+body {
+	background-image: url(../images/water.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-attachment: fixed;
+	background-size: cover;
+	/*  background-size: 100% 700px; */
+	/* background-size: cover; */
+}

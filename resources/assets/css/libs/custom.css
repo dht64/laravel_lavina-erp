@@ -1,0 +1,23 @@
+td a {
+	 color: #007AFF;
+ }
+ 
+td a:hover {
+  text-decoration: underline;
+}
+
+.fade {
+  opacity: 0;
+  -webkit-transition: opacity 0.5s linear;
+  -moz-transition: opacity 0.5s linear;
+  -o-transition: opacity 0.5s linear;
+  transition: opacity 0.5s linear;
+}
+
+.btn {
+	margin-bottom: 0;
+}
+
+.nav-tabs{
+	margin-bottom: 15px;
+}

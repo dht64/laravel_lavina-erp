@@ -1,0 +1,35 @@
+.nav_menu {
+	margin-bottom: 0 !important;
+}
+
+.right_col {
+	display: flex !important;
+	flex-direction: column !important;
+}
+
+.right_col .content {
+}
+
+.right_col .bg-footer {
+	flex: 1 !important;
+	margin: 0px -20px -30px !important;
+	background-image: url(../images/footer.png) !important;
+	background-repeat: no-repeat !important;
+	background-position: center top !important;
+	background-size: cover !important;
+	background-attachment: scroll !important;
+	/* background-size: 100% 700px; */
+	/* background-size: cover; */
+}
+
+td a.btn-pink {
+	color: white !important;
+	background-color: #fa625f !important;
+	border-color: #e0474c !important;
+}
+
+th, td {
+	vertical-align: middle !important;
+}
+
+

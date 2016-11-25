@@ -80,7 +80,7 @@ class MaterialPurchaseController extends Controller
     {
         //
         $purchase = Purchase::findOrFail($id);
-        $materials = Material::pluck('name', 'id')->all();
+        $materials = Material::all();
         $suppliers = Supplier::pluck('name', 'id')->all();
 
         return view('bowner.inventories.purchase.edit', compact('purchase', 'materials', 'suppliers'));

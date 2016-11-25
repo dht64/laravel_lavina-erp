@@ -6,10 +6,7 @@ use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
-
 use Carbon\Carbon;
-use Validator;
-
 use App\OrderDetail;
 use App\Customer;
 use App\Product;
@@ -31,21 +28,10 @@ class OrderController extends Controller
 
     public function index()
     {
+        //
+        $orders = Order::orderBy('created_at', 'asc')->paginate(10);
         $products = Product::pluck('name', 'id')->all();
         $customers = Customer::all();
-
-        $ordersSubmitted = Order::where('submit', 1)->where('status', 0)->get();
-        foreach ($ordersSubmitted as $order) {
-            $order->stock = 1;
-            foreach ($order->orderdetail()->get() as $detail) {
-                if ($detail->quantity > $detail->product->quantity) {
-                    $order->stock = 0;
-                }
-            }
-            $order->save();
-        }
-
-        $orders = Order::orderBy('created_at', 'asc')->paginate(10);
 
         return view('orders.index', compact('orders', 'products', 'customers'));
     }
@@ -70,40 +56,25 @@ class OrderController extends Controller
     {
         $order = new Order();
 
-        $this->validate($request, [
-            'products' => 'distinct',
-        ]);
-
         $order->customer_id = $request['customer'];
         $order->user_id = Auth::user()->id;
         $order->vat = $request['vat'];
+        $quantity = $order->quantity = $request['quantity'];
+        $product_id = $order->product_id = $request['product'];
+        $product = Product::where('id', $product_id);
+        $cost = $product->value('cost');
+        $vat_rate = $product->value('vat_rate');
+        if ($order->vat) {
+            $total_cost = ($cost * $quantity) + ( $cost * $quantity * $vat_rate / 100 );
+
+        } else {
+            $total_cost = $cost * $quantity;
+          }
+        $order->total_cost = $total_cost;
         $order->note = $request['note'];
         //$order->delivery_at = date("Y-m-d", strtotime($request['delivery_at'] . "+1 day"));
         $order->delivery_at = date("Y-m-d", strtotime($request['delivery_at'] ));
-        $order->save();
 
-        // Filter empty array elements
-        $products = array_filter($request->products);
-        $i = 0;
-        $total_cost_order = 0;
-        foreach ($products as $product) {
-            $orderDetail = new OrderDetail;
-            $orderDetail->product_id = $product;
-            $quantity = $orderDetail->quantity = $request->quantity[$i];
-            $i++;
-            $cost = Product::where('id', $product)->value('cost');
-            $vat_rate = Product::where('id', $product)->value('vat_rate');
-            if ($order->vat) {
-                $total_cost = ($cost * $quantity) + ( $cost * $quantity * $vat_rate / 100 );
-            }
-            $total_cost = $cost * $quantity;
-            $total_cost_order += $total_cost;
-            $orderDetail->total_cost = $total_cost;
-            $orderDetail->order_id = $order->id;
-            $orderDetail->save();
-        }
-
-        $order->total_cost = $total_cost_order;
         $order->save();
 
         Session::flash('created_message', 'The order has been created!');
@@ -133,13 +104,19 @@ class OrderController extends Controller
      */
     public function edit($id)
     {
+        //
         $order = Order::findOrFail($id);
+
+        // Redirect if not same owner
+        if (Auth::user()->isEmployee() && (Auth::user()->username != $order->user->username)) {
+          return redirect()->back();
+        }
+
         $products = Product::pluck('name', 'id')->all();
         $customers = Customer::all();
-        $details = OrderDetail::where('order_id', $id)->get();
         $delivery_at = date("d-m-Y", strtotime($order->delivery_at));
 
-        return view('orders.edit', compact('order', 'details', 'products', 'customers', 'delivery_at'));
+        return view('orders.edit', compact('order', 'products', 'customers', 'delivery_at'));
     }
 
     /**
@@ -153,43 +130,28 @@ class OrderController extends Controller
     {
         //
         $order = Order::findOrFail($id);
-
         $order->customer_id = $request['customer'];
         $order->user_id = Auth::user()->id;
         $order->vat = $request['vat'];
+        $quantity = $order->quantity = $request['quantity'];
+        $product_id = $order->product_id = $request['product'];
+        $product = Product::where('id', $product_id);
+        $cost = $product->value('cost');
+        $vat_rate = $product->value('vat_rate');
+        if ($order->vat) {
+            $total_cost = ($cost * $quantity) + ( $cost * $quantity * $vat_rate / 100 );
+        } else {
+            $total_cost = $cost * $quantity;
+          }
+        $order->total_cost = $total_cost;
         $order->note = $request['note'];
-        $order->delivery_at = date("Y-m-d", strtotime($request['delivery_at'] ));
+        $order->delivery_at = date("Y-m-d", strtotime($request['delivery_at']));
 
-        // Filter empty array elements
-        $products = array_filter($request->products);
-        $i = 0;
-        $total_cost_order = 0;
-        $order->orderdetail()->delete();
-        foreach ($products as $product) {
-            $orderDetail = new OrderDetail;
-            $orderDetail->product_id = $product;
-            $quantity = $orderDetail->quantity = $request->quantity[$i];
-            $i++;
-            $cost = Product::where('id', $product)->value('cost');
-            $vat_rate = Product::where('id', $product)->value('vat_rate');
-            if ($order->vat) {
-                $total_cost = ($cost * $quantity) + ( $cost * $quantity * $vat_rate / 100 );
-            } else {
-                $total_cost = $cost * $quantity;
-              }
-            $total_cost_order += $total_cost;
-            $orderDetail->total_cost = $total_cost;
-            $orderDetail->order_id = $order->id;
-            $orderDetail->save();
-        }
-
-        $order->total_cost = $total_cost_order;
-        
         $order->save();
 
         Session::flash('updated_message', 'The order has been updated!');
 
-        return redirect()->back();
+        return redirect('/orders');
     }
 
     /**
@@ -244,15 +206,13 @@ class OrderController extends Controller
     {
         $order = Order::findOrFail($id);
         $order->deliver = 1;
-        $order->save();
 
-        $details = $order->orderdetail()->get();
-        foreach ($details as $detail) {
-            $product = Product::findOrFail($detail->product_id);
-            // Update product inventory quantity
-            $product->quantity = $product->quantity - $detail->quantity;  
-            $product->save();  
-        }
+        $product = Product::findOrFail($order->product_id);
+        // Update product inventory quantity
+        $product->quantity = $product->quantity - $order->quantity;
+
+        $order->save();
+        $product->save();
 
         Session::flash('updated_message', 'The order delivery has been submitted');
 

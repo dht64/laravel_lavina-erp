@@ -4,7 +4,7 @@
 
 	<h1>Edit Product</h1>
 
-	{!! Form::model($product, ['method'=>'GET', 'route'=>['bowner.inventories.product.update', $product->id], 'class'=>'form-group']) !!}
+	{!! Form::model($product, ['method'=>'PATCH', 'route'=>['bowner.inventories.product.update', $product->id], 'class'=>'form-group']) !!}
 	
 	<div class="row">
 		<div class="form-group col-sm-6">

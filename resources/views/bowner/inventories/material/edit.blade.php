@@ -4,7 +4,7 @@
 
 	<h1>Edit Material</h1>
 
-	{!! Form::model($material, ['method'=>'GET', 'route'=>['bowner.inventories.material.update', $material->id], 'class'=>'form-group']) !!}
+	{!! Form::model($material, ['method'=>'PATCH', 'route'=>['bowner.inventories.material.update', $material->id], 'class'=>'form-group']) !!}
 
 	<div class="form-group col-sm-6">
 		{!! Form::label('name', 'Material:') !!}

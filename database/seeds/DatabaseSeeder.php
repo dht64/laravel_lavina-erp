@@ -18,6 +18,8 @@ class DatabaseSeeder extends Seeder
         $this->call(SupplierTableSeeder::class);
         $this->call(MaterialTableSeeder::class);
         $this->call(RolesTableSeeder::class);
+        $this->call(HumanTableSeeder::class);
         $this->call(UsersTableSeeder::class);
+        $this->call(LeaveTableSeeder::class);
     }
 }

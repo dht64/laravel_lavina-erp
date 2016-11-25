@@ -8,7 +8,11 @@
 	<div class="row">
 		<div class="form-group col-sm-6">
 			{!! Form::label('material_id', 'Material:') !!}
-			{!! Form::select('material_id', [''=>'Choose Material'] + $materials, null, ['class'=>'form-control', 'required']) !!}
+			<select name="material_id" id="material_id" class="form-control" required>
+				@foreach($materials as $material)
+					<option value="{{ $material->id }}" {{ $material->id == $purchase->material_id ? 'selected' : '' }}>{{ $material->name .' ('.$material->unit->name .')'}}</option>
+				@endforeach
+			</select>
 		</div>	
 
 		<div class="form-group col-sm-6">
@@ -18,7 +22,7 @@
 
 		<div class="form-group col-sm-6">
 			{!! Form::label('quantity', 'Purchase Quantity:') !!}
-			{!! Form::number('quantity', null, ['class'=>'form-control', 'min'=>0]) !!}
+			{!! Form::number('quantity', null, ['class'=>'form-control', 'min'=>1, 'required']) !!}
 		</div>
 	</div>
 

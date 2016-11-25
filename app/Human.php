@@ -12,11 +12,13 @@ class Human extends Model
 		'name', 'salary', 'start_day', 'birth', 'gender', 'address1', 'address2', 'phone', 'photo', 'job', 'idnum'
 	];
 
-	public function salary(){
+	public function salary()
+	{
 		return $this->hasOne('App\Salary');
 	}
 
-	public function humanId(){
+	public function humanId()
+	{
 		return $this->id;
 	}
 

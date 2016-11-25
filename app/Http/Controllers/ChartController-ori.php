@@ -43,8 +43,8 @@ class ChartController extends Controller
     public function index()
     {
         // GET ORDER DATA
-        //$orders = Order::with('product')->where('status', 1)->orderBy('updated_at', 'desc')->get();
-    	$orders = Order::where('status', 1)->orderBy('updated_at', 'desc')->limit(1000)->get();
+        $orders = Order::with('product')->where('status', 1)->orderBy('updated_at', 'desc')->get();
+
 
         $orderDaily = [];
         $orderMonthly = [];
@@ -52,83 +52,88 @@ class ChartController extends Controller
         $i = 0;
         $j = 0;
 
-        foreach ($orders as $order) {
-            foreach ($order->orderdetail()->get() as $detail) {
-                $product = $detail->product->name;
 
-                // Get Daily Data
-                if ($i == 0) {
-                    $orderDaily[$i][$product] = $detail->total_cost;
-                    $orderDaily[$i]['date'] = date('Y-m-d', strtotime($detail->updated_at));
-                    $i++; 
-                } else {
-                    // check if same data in order and orderDaily
-                    if (date('Y-m-d', strtotime($detail->updated_at)) == $orderDaily[$i-1]['date']) {
-                        if (array_key_exists($product, $orderDaily[$i-1])) {
-                            $orderDaily[$i-1][$product] += $detail->total_cost;
-                        } else {
-                            $orderDaily[$i-1][$product] = $detail->total_cost;
-                          } // /else
+
+        // get orders data in array method
+    	$orders = $orders->toArray();
+        
+    	foreach($orders as $order) {
+    		// get product name in order
+            //dd($order);
+    		$product = $order['product']['name'];
+
+            // Get Daily Data
+    		if ($i == 0) {
+    			$orderDaily[$i][$product] = $order['total_cost'];
+				$orderDaily[$i]['date'] = date('Y-m-d', strtotime($order['updated_at']));
+				$i++; 
+    		} else {
+	    		// check if same data in order and orderDaily
+	    		if (date('Y-m-d', strtotime($order['updated_at'])) == $orderDaily[$i-1]['date']) {
+	    			if (array_key_exists($product, $orderDaily[$i-1])) {
+	    				$orderDaily[$i-1][$product] += $order['total_cost'];
+	    			} else {
+	    				$orderDaily[$i-1][$product] = $order['total_cost'];
+	    			  } // /else
+	    		} else {
+	    			$orderDaily[$i][$product] = $order['total_cost'];
+					$orderDaily[$i]['date'] = date('Y-m-d', strtotime($order['updated_at']));
+					$i++; 
+	    		  } // /else $order['date'] == $orderDaily['date']
+    		  } // /else $i == 0
+
+            // Get Monthly data
+            if ($j == 0) {
+                $orderMonthly[$j][$product] = $order['total_cost'];
+                $orderMonthly[$j]['date'] = date('Y-m', strtotime($order['updated_at']));
+                $j++; 
+            } else {
+                // check if same data in order and orderMonthly
+                if (date('Y-m', strtotime($order['updated_at'])) == $orderMonthly[$j-1]['date']) {
+                    if (array_key_exists($product, $orderMonthly[$j-1])) {
+                        $orderMonthly[$j-1][$product] += $order['total_cost'];
                     } else {
-                        $orderDaily[$i][$product] = $detail->total_cost;
-                        $orderDaily[$i]['date'] = date('Y-m-d', strtotime($detail->updated_at));
-                        $i++; 
-                      } // /else $order['date'] == $orderDaily['date']
-                  } // /else $i == 0
-
-                // Get Monthly data
-                if ($j == 0) {
-                    $orderMonthly[$j][$product] = $detail->total_cost;
-                    $orderMonthly[$j]['date'] = date('Y-m', strtotime($detail->updated_at));
+                        $orderMonthly[$j-1][$product] = $order['total_cost'];
+                      } // /else
+                } else {
+                    $orderMonthly[$j][$product] = $order['total_cost'];
+                    $orderMonthly[$j]['date'] = date('Y-m', strtotime($order['updated_at']));
                     $j++; 
+                  } // /else $order['date'] == $orderMonthly['date']
+              } // /else $j == 0
+
+            // Get Yearly data
+            $year = date("Y", strtotime($order['updated_at']));
+            $flag = 0;
+
+            if (array_key_exists($year, $orderYearly)) {
+                /*
+                if ($k == 0) {
+                $orderYearly[$year][$k]['product'] = $product;
+                $orderYearly[$year][$k]['revenue'] = $order['total_cost'];
+                $k++; 
                 } else {
-                    // check if same data in order and orderMonthly
-                    if (date('Y-m', strtotime($detail->updated_at)) == $orderMonthly[$j-1]['date']) {
-                        if (array_key_exists($product, $orderMonthly[$j-1])) {
-                            $orderMonthly[$j-1][$product] += $detail->total_cost;
-                        } else {
-                            $orderMonthly[$j-1][$product] = $detail->total_cost;
-                          } // /else
-                    } else {
-                        $orderMonthly[$j][$product] = $detail->total_cost;
-                        $orderMonthly[$j]['date'] = date('Y-m', strtotime($detail->updated_at));
-                        $j++; 
-                      } // /else $order['date'] == $orderMonthly['date']
-                  } // /else $j == 0
-
-                // Get Yearly data
-                $year = date("Y", strtotime($detail->updated_at));
-                $flag = 0;
-
-                if (array_key_exists($year, $orderYearly)) {
-                    /*
-                    if ($k == 0) {
+                */
+                // check if same data in order and orderYearly[$year]
+                for ($k2 = 0; $k2 <= $k; $k2++ ) {
+                    if (in_array($product, $orderYearly[$year][$k2])) {
+                    $orderYearly[$year][$k2]['revenue'] += $order['total_cost'];
+                    $flag = 1; // has same product
+                    break;
+                    }
+                }
+                if (!$flag) {
+                    $k++;
                     $orderYearly[$year][$k]['product'] = $product;
                     $orderYearly[$year][$k]['revenue'] = $order['total_cost'];
-                    $k++; 
-                    } else {
-                    */
-                    // check if same data in order and orderYearly[$year]
-                    for ($k2 = 0; $k2 <= $k; $k2++ ) {
-                        if (in_array($product, $orderYearly[$year][$k2])) {
-                        $orderYearly[$year][$k2]['revenue'] += $detail->total_cost;
-                        $flag = 1; // has same product
-                        break;
-                        }
-                    }
-                    if (!$flag) {
-                        $k++;
-                        $orderYearly[$year][$k]['product'] = $product;
-                        $orderYearly[$year][$k]['revenue'] = $detail->total_cost;
-                    }
-                } else {
-                    $k = 0;
-                    $orderYearly[$year][$k]['product'] = $product;
-                    $orderYearly[$year][$k]['revenue'] = $detail->total_cost;
-                  } // /else array_key_exists
+                }
+            } else {
+                $k = 0;
+                $orderYearly[$year][$k]['product'] = $product;
+                $orderYearly[$year][$k]['revenue'] = $order['total_cost'];
+              } // /else array_key_exists
 
-            } // /foreach orderdetail
-        } // /foreach order
+    	} // /foreach
 
         // GET SALARY DATA
         $salaries = Salary::orderBy('dates', 'desc')->get();

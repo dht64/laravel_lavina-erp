@@ -72,7 +72,7 @@ class BownerHumansController extends Controller
 
         $human = Human::create($input);
         
-        //create salary for new employee
+        // Create salary for new employee
         Salary::create(['human_id' => $human->id]);
         Leave::create(['human_id' => $human->id]);
 

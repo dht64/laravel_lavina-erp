@@ -17,11 +17,7 @@ class CreateLeavesTable extends Migration
             $table->increments('id');
             $table->integer('human_id')->unsigned()->index();
             $table->tinyInteger('annual_leave')->unsigned()->default(10);
-            $table->tinyInteger('sick_leave')->unsigned()->default(3);
-            $table->tinyInteger('maternity_leave')->unsigned()->default(3);
             $table->tinyInteger('avai_annual_leave')->unsigned()->default(10);
-            $table->tinyInteger('avai_sick_leave')->unsigned()->default(3);
-            $table->tinyInteger('avai_maternity_leave')->unsigned()->default(3);
             $table->smallInteger('unpaid_leave')->unsigned()->default(0);
             $table->timestamps();
 

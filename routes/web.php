@@ -114,7 +114,7 @@ Route::group(['middleware' => 'bowner_manager', 'as' => 'bowner.'], function() {
 
 	// Production route
 	Route::resource('bowner/production', 'ProductionController');
-	Route::get('bowner/complete_production/{order_id}/{p_qty}',[
+	Route::get('bowner/complete_production/{o_qty}/{p_id}/{p_qty}',[
 		'uses' => 'ProductionController@complete',
 		'as' =>'production.complete',
 	]);
@@ -130,11 +130,11 @@ Route::group(['middleware' => 'bowner_manager', 'as' => 'bowner.'], function() {
 		'uses' => 'InventoryController@editMaterial',
 		'as' => 'inventories.material.edit'
 	]);
-	Route::get('bowner/inventories/product/update/{product_id}', [
+	Route::patch('bowner/inventories/product/update/{product_id}', [
 		'uses' => 'InventoryController@updateProduct',
 		'as' => 'inventories.product.update'
 	]);
-	Route::get('bowner/inventories/material/update/{material_id}', [
+	Route::patch('bowner/inventories/material/update/{material_id}', [
 		'uses' => 'InventoryController@updateMaterial',
 		'as' => 'inventories.material.update'
 	]);

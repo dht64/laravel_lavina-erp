@@ -63,7 +63,7 @@ function getYearlyData( monthly ) {
 function setData( type ) {
   if (type == "daily") {
   	chart.dataProvider = chartData;
-  	$('h1.serial').text('Daily Income');
+  	$('h1.serial').text('Daily Revenue');
   }
 
   else if ( type == "monthly" ) {

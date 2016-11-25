@@ -13,7 +13,7 @@
     <link href="{{ asset('css/libs.css') }}" rel="stylesheet">
     <link href="{{ asset('css/libsstyle.css') }}" rel="stylesheet">
 
-    <script src="//cdn.ckeditor.com/4.5.10/standard/ckeditor.js"></script>
+    {{--<script src="//cdn.ckeditor.com/4.5.10/standard/ckeditor.js"></script>--}}
 
     @yield('styles')
 

@@ -7,8 +7,8 @@
 	{!! Form::open(['method'=>'POST', 'action'=>'MaterialPurchaseController@store', 'class'=>'form-group']) !!}
 	<div class="row">
 		<div class="form-group col-sm-6">
-			{!! Form::label('material', 'Material (*):') !!}
-			<select name="material" id="material" class="form-control" required>
+			{!! Form::label('material_id', 'Material (*):') !!}
+			<select name="material_id" id="material_id" class="form-control" required>
 				<option value="" selected>Choose Material</option>
 				@foreach($materials as $material)
 					<option value="{{ $material->id }}">{{ $material->name .' ('.$material->unit->name .')'}}</option>
@@ -25,7 +25,7 @@
 	<div class="row">
 		<div class="form-group col-sm-6">
 			{!! Form::label('quantity', 'Purchase Quantity (*):') !!}
-			{!! Form::number('quantity', null, ['class'=>'form-control', 'min'=>0, 'required']) !!}
+			{!! Form::number('quantity', null, ['class'=>'form-control', 'min'=>1, 'required']) !!}
 		</div>
 	</div>
 

@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\OrderDetail;
 use App\Production;
 use App\Material;
 use App\Product;
@@ -17,9 +18,8 @@ class ProductionController extends Controller
     {
     	$orders = Order::where('status', 0)->paginate(10);
         $products = Product::pluck('quantity','id');
-        $flag = [1=>0,2=>0,3=>0];
 
-    	return view('bowner.production.index', compact('orders', 'products', 'flag'));
+    	return view('bowner.production.index', compact('orders', 'products'));
     }
 
     public function show($id)
@@ -29,12 +29,11 @@ class ProductionController extends Controller
     	return view('bowner.production.print', compact('order'));
     }
 
-    public function complete($id, $p_qty)
+    public function complete($detail_qty, $id, $p_qty)
     {
-        $order = Order::findOrFail($id);
-        $product = Product::findOrFail($order->product_id);
-        $material = Material::findOrFail($order->product->material_id);
-        $o_qty = $order->quantity;
+        $product = Product::findOrFail($id);
+        $material = Material::findOrFail($product->material_id);
+        $o_qty = $detail_qty;
         $cur_prod_qty = $product->quantity;
         $p_extra = $product->extra;
         $m_qty = $material->quantity;

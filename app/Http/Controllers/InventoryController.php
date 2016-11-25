@@ -96,7 +96,7 @@ class InventoryController extends Controller
         $p_qty = $product->quantity = $request->quantity;
 
         // If 'hod' so no 'extra'
-        if ($request->extra) {
+        if ($request->extra != null) {
             $extra = $product->extra = $request->extra;
 
             if ($extra >= $product->unit->equi) {
@@ -104,7 +104,7 @@ class InventoryController extends Controller
                 $product->extra = $extra % $product->unit->equi;
             }
         }
-        
+
         $product->save();
 
         Session::flash('updated_message', 'The product available quantity has been updated');

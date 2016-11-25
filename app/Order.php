@@ -2,24 +2,36 @@
 
 namespace App;
 
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Model;
 
 use Carbon\Carbon;
 
 class Order extends Model
 {
-    //
-    public function user() {
+    use SoftDeletes;
+    
+    protected $dates = ['deleted_at'];
+
+    public function user() 
+    {
     	return $this->belongsTo('App\User');    
     }
 
-    public function customer() {
+    public function product() {
+        return $this->belongsTo('App\Product');    
+    }  
+
+    public function customer() 
+    {
     	return $this->belongsTo('App\Customer');    
     }
-	    
-	public function product() {
-    	return $this->belongsTo('App\Product');    
-    }  
+
+    public function orderdetail() 
+    {
+        return $this->hasMany('App\OrderDetail');
+    }
+
 
     public function getDeliveryAtAttribute($value)
     {

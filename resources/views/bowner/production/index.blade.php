@@ -25,42 +25,58 @@
 				</tr>
 			</thead>
 			<tbody>
-				@foreach ($orders as $order)
-				<tr>
-					<td>{{ $order->id }}</td>
-					<td>{{ $order->product->name }}</td>
-					<td>{{ $order->product->unit->name }}</td>
-					<td>{{ $order->quantity }}</td>
-					<td>{{ $products[$order->product_id] }} (x <i>{{ $order->product->unit->equi }}</i>)</td>
-					<td><i>{{ $order->product->extra }}<i></td>
-					<td>{{ $order->product->material->quantity }} (x <i>{{ $order->product->material->unit->equi }}</i>)</td>
-					@if (($o_qty = $order->quantity) <= $products[$order->product_id])
-						@php 
-							$flag[$order->product_id] = 0
-						@endphp
-						<!-- Filled status -->
-						<td class="success">Filled &nbsp;<a class="btn btn-xs btn-success pull-right" href="{{route('bowner.production.show', $order->id)}}" target="_blank"><span class="glyphicon glyphicon-print" data-toggle="tooltip" data-placement="top" title="print"></span></a></td>
-					@elseif ((($m_qty = $order->product->material->quantity) <= 0) || ((($o_qty - $products[$order->product_id]) * $order->product->unit->equi) > ($m_qty * $order->product->material->unit->equi)))
-						<!-- Lack Material status -->
-						<td class="warning">Lack Material</td>
-					@else
-						<!-- Under Production status -->
-						<td>Ready for Production 
-						@if ($flag[$order->product_id] == 0)
-							<a class="btn btn-xs btn-default pull-right" data-toggle="tooltip" data-placement="top" title="complete production" href="{{ route('bowner.production.complete', [$order->id, $products[$order->product_id]]) }}"><span class="glyphicon glyphicon-ok"></span></a>
-							@php 
-								$flag[$order->product_id] = 1
-							@endphp
-						@endif
-						</td>
-					@endif
-					<td>{{ date("d-m-Y", strtotime($order->updated_at)) }}</td>
-				</tr>
+			@foreach ($orders as $order)
 				@php 
-					$products[$order->product_id] -= $order->quantity 
+					$i = 0; // count items in an order 
+					$orderFilled[$order->id] = 1;
 				@endphp
-				</div>
+				<tr>
+					<td rowspan="{{ $count = count($order->orderdetail()->get()) }}">{{ $order->id }}</td>
+				@foreach ($order->orderdetail()->get() as $detail)
+					@php 
+						// Only complete production for relevant product if $flag = 0
+						$flag[$detail->product_id] = 0;
+						$i++;
+					@endphp
+						<td>{{ $detail->product->name }}</td>
+						<td>{{ $detail->product->unit->name }}</td>
+						<td>{{ $detail->quantity }}</td>
+						<td>{{ $products[$detail->product_id] }} (x <i>{{ $detail->product->unit->equi }}</i>)</td>
+						<td><i>{{ $detail->product->extra }}<i></td>
+						<td>{{ $detail->product->material->quantity }} (x <i>{{ $detail->product->material->unit->equi }}</i>)</td>
+						@if (($o_qty = $detail->quantity) <= $products[$detail->product_id])
+							<!-- Filled status -->
+							<td class="success">Filled &nbsp;
+							{{-- Appear print after done checking all items of the order --}}
+							@if (($i == $count) && ($orderFilled[$order->id] == 1))
+							<a class="btn btn-xs btn-success pull-right" href="{{route('bowner.production.show', $order->id)}}" target="_blank"><span class="glyphicon glyphicon-print" data-toggle="tooltip" data-placement="top" title="print"></span></a>
+							@endif
+							</td>
+						@elseif ((($m_qty = $detail->product->material->quantity) <= 0) || ((($o_qty - $products[$detail->product_id]) * $detail->product->unit->equi) > ($m_qty * $detail->product->material->unit->equi)))
+							<!-- Lack Material status -->
+							<td class="warning">Lack Material</td>
+							@php
+								$orderFilled[$order->id] = 0;
+							@endphp
+						@else
+							<!-- Under Production status -->
+							<td>Ready for Production 
+							@if ($flag[$detail->product_id] == 0)
+								<a class="btn btn-xs btn-default pull-right" data-toggle="tooltip" data-placement="top" title="complete production" href="{{ route('bowner.production.complete', [$detail->quantity, $detail->product_id, $products[$detail->product_id]]) }}"><span class="glyphicon glyphicon-ok"></span></a>
+								@php 
+									$flag[$detail->product_id] = 1;
+									$orderFilled[$order->id] = 0;
+								@endphp
+							@endif
+							</td>
+						@endif
+						<td>{{ date("d-m-Y", strtotime($detail->updated_at)) }}</td>
+					</tr>
+					@php 
+						$products[$detail->product_id] -= $detail->quantity 
+					@endphp
 				@endforeach
+			@endforeach
 			</tbody>
 		</table>
 	</div>

@@ -27,44 +27,51 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function role(){
+    public function role()
+    {
         return $this->belongsTo('App\Role');
     }
     
-    public function photo(){
+    public function photo()
+    {
         return $this->belongsTo('App\Photo');
     }
     
     /*
-    public function setPasswordAttribute($password){
+    public function setPasswordAttribute($password)
+    {
         if(!empty($password)){
             $this->attributes['password'] = bcrypt($password);
         }
     }
     */
     
-    public function isAdmin(){
+    public function isAdmin()
+    {
         if($this->role->name == "admin" && $this->is_active == 1){
             return true;
         }
         return false;
     }
     
-    public function isBowner(){
+    public function isBowner()
+    {
         if($this->role->name == "business" && $this->is_active == 1){
             return true;
         }
         return false;
     }
 
-    public function isManager(){
+    public function isManager()
+    {
         if ($this->role->name == "manager" && $this->is_active == 1) {
             return true;
         }
         return false;
     }
 
-    public function isEmployee(){
+    public function isEmployee()
+    {
         if($this->role->name == "employee" && $this->is_active == 1){
             return true;
         }

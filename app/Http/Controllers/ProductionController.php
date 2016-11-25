@@ -16,7 +16,7 @@ class ProductionController extends Controller
 {
     public function index()
     {
-    	$orders = Order::where('status', 0)->paginate(10);
+    	$orders = Order::where('deliver', 0)->where('submit', 1)->paginate(10);
         $products = Product::pluck('quantity','id');
 
     	return view('bowner.production.index', compact('orders', 'products'));

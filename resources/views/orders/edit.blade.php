@@ -7,8 +7,10 @@
 	<h1>Order Detail</h1>
 	<!-- Start .nav nav-tabs -->
 	<ul class="nav nav-tabs" role="tablist">
-		<li role="presenstation" class="active"><a href="#view" aria-controls="view" role="tab" data-toggle="tab"><strong>View Orders</strong></a></li>
-		<li role="presenstation"><a href="#create" aria-controls="create" role="tab" data-toggle="tab"><strong>Edit Orders</strong></a></li>
+		<li role="presenstation" class="active"><a href="#view" aria-controls="view" role="tab" data-toggle="tab"><strong>View Order Detail</strong></a></li>
+		@if (!$order->deliver)
+		<li role="presenstation"><a href="#create" aria-controls="create" role="tab" data-toggle="tab"><strong>Edit Order</strong></a></li>
+		@endif
 	</ul>
 	<!-- End .nav nav-tabs -->
 
@@ -28,7 +30,7 @@
 			        <th>Quantity</th>
 			        <th>Stock</th>
 			        <th>VAT (5%)</th>
-			        <th>Price</th>
+			        <th>Price ($)</th>
 			        <th>Status</th>
 			      </tr>
 			    </thead>
@@ -67,9 +69,9 @@
 		  	<!-- End .table-responsive -->
 		  	<a href="{{ url('orders') }}" class="btn btn-info"><span class="glyphicon glyphicon-chevron-left"></span> Back to Orders</a>
 		</div>
-		<!-- End .tab-pane -->
-		<!-- End Show Order -->
-
+		<!-- End View Order .tab-pane -->
+		
+		@if (!$order->deliver)
 		<!-- Edit Order -->
 		<div role="tabpanel2" class="tab-pane fade" id="create" style="padding: 20px;">
 			<div class="row add-button">
@@ -136,8 +138,8 @@
 				</ul>
 			</div>
 		</div>
-		<!-- End .tab-pane -->
-		<!-- End Create Order -->
+		<!-- End Edit Order .tab-pane -->
+		@endif
 	</div>
 	<!-- End .tab-content -->
 

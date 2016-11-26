@@ -24,7 +24,7 @@
 			        <th>Actions</th>
 			        <th>Customer</th>
 			        <th>VAT (5%)</th>
-			        <th>Total Price</th>
+			        <th>Total Price ($)</th>
 			        <th>Status</th>
 			        <th>Created By</th>
 			        <th>Order Date</th>
@@ -44,7 +44,7 @@
 							<a class="btn btn-xs btn-primary" data-toggle="tooltip" data-placement="left" title="view/edit order detail" href="{{ route('orders.edit', $order->id) }}"><span class="glyphicon glyphicon-pencil"></span></a>
 						@else
 							<!-- Disable Edit button -->
-							<a href="#" class="btn btn-xs btn-primary disabled"><span class="glyphicon glyphicon-pencil"></span></a>
+							<a class="btn btn-xs btn-primary" data-toggle="tooltip" data-placement="left" title="view order detail" href="{{ route('orders.edit', $order->id) }}"><span class="glyphicon glyphicon-list-alt"></span></a>
 						@endif
 						@if (Auth::user()->isBowner())
 							<!-- Delete button -->

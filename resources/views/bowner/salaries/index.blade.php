@@ -46,7 +46,7 @@
 			        <th>Un-paid Leaves</th>
 			        <th>Changes ($)</th>
 			        <th>Date</th>
-			        <th>Final Paymment ($)</th>
+			        <th>Final Payment ($)</th>
 			      </tr>
 			    </thead>
 			    <tbody>

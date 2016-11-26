@@ -18,8 +18,11 @@ class ProductionController extends Controller
     {
     	$orders = Order::where('deliver', 0)->where('submit', 1)->paginate(10);
         $products = Product::pluck('quantity','id');
+        foreach ($products as $key => $value) {
+            $flag[$key] = 0;
+        }
 
-    	return view('bowner.production.index', compact('orders', 'products'));
+    	return view('bowner.production.index', compact('orders', 'products', 'flag'));
     }
 
     public function show($id)

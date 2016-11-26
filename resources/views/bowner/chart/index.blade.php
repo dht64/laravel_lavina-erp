@@ -294,6 +294,11 @@ var chart2 = AmCharts.makeChart( "chartdiv-pie", {
   "innerRadius": 80,
   "pullOutRadius": 20,
   "marginTop": 30,
+  "legend":{
+   	"position":"right",
+    "marginRight":50,
+    "autoMargins":false
+  },
   /*"titles": [{
     "text": "Monthly Income by Product"
   }],*/

@@ -34,8 +34,6 @@
 					<td rowspan="{{ $count = count($order->orderdetail()->get()) }}">{{ $order->id }}</td>
 				@foreach ($order->orderdetail()->get() as $detail)
 					@php 
-						// Only complete production for relevant product if $flag = 0
-						$flag[$detail->product_id] = 0;
 						$i++;
 					@endphp
 						<td>{{ $detail->product->name }}</td>
@@ -45,11 +43,14 @@
 						<td><i>{{ $detail->product->extra }}<i></td>
 						<td>{{ $detail->product->material->quantity }} (x <i>{{ $detail->product->material->unit->equi }}</i>)</td>
 						@if (($o_qty = $detail->quantity) <= $products[$detail->product_id])
+							@php
+								$flag[$detail->product_id] = 0
+							@endphp
 							<!-- Filled status -->
 							<td class="success">Filled &nbsp;
 							{{-- Appear print after done checking all items of the order --}}
 							@if (($i == $count) && ($orderFilled[$order->id] == 1))
-							<a class="btn btn-xs btn-success pull-right" href="{{route('bowner.production.show', $order->id)}}" target="_blank"><span class="glyphicon glyphicon-print" data-toggle="tooltip" data-placement="top" title="print"></span></a>
+								<a class="btn btn-xs btn-success pull-right" href="{{route('bowner.production.show', $order->id)}}" target="_blank"><span class="glyphicon glyphicon-print" data-toggle="tooltip" data-placement="top" title="print"></span></a>
 							@endif
 							</td>
 						@elseif ((($m_qty = $detail->product->material->quantity) <= 0) || ((($o_qty - $products[$detail->product_id]) * $detail->product->unit->equi) > ($m_qty * $detail->product->material->unit->equi)))

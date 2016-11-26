@@ -4,6 +4,154 @@
 		"selected_items":
 		[
 			[
+				"add",
+				"add-product"
+			],
+			[
+				"produc",
+				"productQty"
+			],
+			[
+				"pro",
+				"productQty"
+			],
+			[
+				"check",
+				"checkSelected"
+			],
+			[
+				"selec",
+				"selected"
+			],
+			[
+				"selected",
+				"selectedValue"
+			],
+			[
+				"selectd",
+				"selectedValue"
+			],
+			[
+				"remove",
+				"removeBut"
+			],
+			[
+				"order",
+				"orderYearly"
+			],
+			[
+				"subm",
+				"submitBut"
+			],
+			[
+				"sub",
+				"submitBut"
+			],
+			[
+				"cloneP",
+				"cloneParent"
+			],
+			[
+				"clone",
+				"cloneParent"
+			],
+			[
+				"in",
+				"insertAfter"
+			],
+			[
+				"clon",
+				"cloneInput"
+			],
+			[
+				"row",
+				"row-clone"
+			],
+			[
+				"cl",
+				"cloneParent"
+			],
+			[
+				"padd",
+				"padding-right"
+			],
+			[
+				"pu",
+				"public"
+			],
+			[
+				"Or",
+				"OrderDetail"
+			],
+			[
+				"O",
+				"OrderDetail"
+			],
+			[
+				"orderde",
+				"orderdetail"
+			],
+			[
+				"or",
+				"ordersSubmitted"
+			],
+			[
+				"oder",
+				"ordersSubmitted"
+			],
+			[
+				"dai",
+				"daily_pay"
+			],
+			[
+				"to",
+				"total_cost_order"
+			],
+			[
+				"total",
+				"total_cost"
+			],
+			[
+				"total_c",
+				"total_cost_order"
+			],
+			[
+				"produ",
+				"product_id"
+			],
+			[
+				"p",
+				"product"
+			],
+			[
+				"array_fil",
+				"array_filter"
+			],
+			[
+				"prd",
+				"products"
+			],
+			[
+				"prod",
+				"product"
+			],
+			[
+				"Order",
+				"OrderDetail"
+			],
+			[
+				"S",
+				"SoftDeletes"
+			],
+			[
+				"va",
+				"vat_rate"
+			],
+			[
+				"req",
+				"request"
+			],
+			[
 				"em",
 				"email"
 			],
@@ -40,23 +188,11 @@
 				"margin-top"
 			],
 			[
-				"in",
-				"inline-flex"
-			],
-			[
 				"btn",
 				"btn-pink"
 			],
 			[
 				"o",
-				"orderMonthly"
-			],
-			[
-				"or",
-				"orderDaily"
-			],
-			[
-				"order",
 				"orderMonthly"
 			],
 			[
@@ -192,16 +328,8 @@
 				"center"
 			],
 			[
-				"Order",
-				"OrderController"
-			],
-			[
 				"required",
 				"required_m_qty"
-			],
-			[
-				"pro",
-				"products"
 			],
 			[
 				"requi",
@@ -238,14 +366,6 @@
 			[
 				"ex",
 				"extra_qty"
-			],
-			[
-				"prod",
-				"product"
-			],
-			[
-				"req",
-				"required_p_qty"
 			],
 			[
 				"m",
@@ -394,126 +514,6 @@
 			[
 				"pass",
 				"password"
-			],
-			[
-				"Requ",
-				"Request"
-			],
-			[
-				"fon",
-				"font-size"
-			],
-			[
-				"fw",
-				"fw-b\tfont-weight: bold;"
-			],
-			[
-				"key",
-				"keyExistsMulti"
-			],
-			[
-				"is_a",
-				"is_array"
-			],
-			[
-				"array_ke",
-				"array_key_exists"
-			],
-			[
-				"json",
-				"json_encode"
-			],
-			[
-				"strto",
-				"strtotime"
-			],
-			[
-				"su",
-				"supplier"
-			],
-			[
-				"sta",
-				"status"
-			],
-			[
-				"mater",
-				"material_qty"
-			],
-			[
-				"mate",
-				"material_id"
-			],
-			[
-				"ma",
-				"material"
-			],
-			[
-				"Url",
-				"UrlWindowPresenterTrait"
-			],
-			[
-				"Boo",
-				"BootstrapThreeNextPreviousButtonRendererTrait"
-			],
-			[
-				"Presenter",
-				"PresenterContract"
-			],
-			[
-				"bo",
-				"border"
-			],
-			[
-				"materia",
-				"materials"
-			],
-			[
-				"update",
-				"updated_message"
-			],
-			[
-				"no",
-				"nowrap"
-			],
-			[
-				"product",
-				"product_id"
-			],
-			[
-				"ann",
-				"annual_leave"
-			],
-			[
-				"num_",
-				"num_nondeduct_leave"
-			],
-			[
-				"avai",
-				"avai_annual_leave"
-			],
-			[
-				"annua",
-				"annual_leave"
-			],
-			[
-				"an",
-				"annual_leave"
-			],
-			[
-				"annual",
-				"annual_leaves"
-			],
-			[
-				"annu",
-				"annual_leaves"
-			],
-			[
-				"chosen",
-				"chosenMn"
-			],
-			[
-				"red",
-				"redirectTo"
 			]
 		]
 	},
@@ -523,34 +523,59 @@
 			"file": "routes/web.php",
 			"settings":
 			{
-				"buffer_size": 5015,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/Http/Requests/HumanRequest.php",
-			"settings":
-			{
-				"buffer_size": 1015,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/Http/Controllers/AdminUsersController.php",
-			"settings":
-			{
-				"buffer_size": 3970,
+				"buffer_size": 5023,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/Http/Controllers/BownerHumansController.php",
+			"file": "resources/views/orders/index.blade.php",
 			"settings":
 			{
-				"buffer_size": 4304,
+				"buffer_size": 9640,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "resources/views/bowner/chart/index.blade.php",
+			"settings":
+			{
+				"buffer_size": 8694,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "resources/views/bowner/salaries/index.blade.php",
+			"settings":
+			{
+				"buffer_size": 3424,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "resources/views/orders/edit.blade.php",
+			"settings":
+			{
+				"buffer_size": 7857,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/Http/Controllers/ProductionController.php",
+			"settings":
+			{
+				"buffer_size": 2288,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "bootstrap/cache/config.php",
+			"settings":
+			{
+				"buffer_size": 10648,
 				"line_ending": "Unix"
 			}
 		}
@@ -609,17 +634,10 @@
 	"expanded_folders":
 	[
 		"/C/xampp/htdocs/lavina_erp",
-		"/C/xampp/htdocs/lavina_erp/app",
-		"/C/xampp/htdocs/lavina_erp/app/Http",
 		"/C/xampp/htdocs/lavina_erp/app/Http/Controllers",
 		"/C/xampp/htdocs/lavina_erp/app/Http/Controllers/Auth",
-		"/C/xampp/htdocs/lavina_erp/app/Http/Middleware",
-		"/C/xampp/htdocs/lavina_erp/app/Http/Requests",
-		"/C/xampp/htdocs/lavina_erp/database",
 		"/C/xampp/htdocs/lavina_erp/database/migrations",
 		"/C/xampp/htdocs/lavina_erp/database/seeds",
-		"/C/xampp/htdocs/lavina_erp/public",
-		"/C/xampp/htdocs/lavina_erp/public/css",
 		"/C/xampp/htdocs/lavina_erp/resources",
 		"/C/xampp/htdocs/lavina_erp/resources/assets",
 		"/C/xampp/htdocs/lavina_erp/resources/assets/js",
@@ -648,80 +666,100 @@
 		"/C/xampp/htdocs/lavina_erp/resources/views/includes",
 		"/C/xampp/htdocs/lavina_erp/resources/views/layouts",
 		"/C/xampp/htdocs/lavina_erp/resources/views/orders",
-		"/C/xampp/htdocs/lavina_erp/resources/views/vendor",
-		"/C/xampp/htdocs/lavina_erp/routes"
+		"/C/xampp/htdocs/lavina_erp/resources/views/vendor"
 	],
 	"file_history":
 	[
-		"/C/xampp/htdocs/lavina_erp/resources/lang/en/validation.php",
+		"/C/xampp/htdocs/lavina_erp/bootstrap/cache/services-ori.php",
+		"/C/xampp/htdocs/lavina_erp/app/Http/Controllers/OrderController.php",
+		"/C/xampp/htdocs/lavina_erp/resources/views/bowner/chart/index.blade.php",
+		"/C/xampp/htdocs/lavina_erp/resources/views/bowner/inventories/purchase/edit.blade.php",
+		"/C/xampp/htdocs/lavina_erp/resources/views/bowner/inventories/purchase/create.blade.php",
+		"/C/xampp/htdocs/lavina_erp/resources/views/orders/index.blade.php",
+		"/C/xampp/htdocs/lavina_erp/resources/views/orders/edit.blade.php",
+		"/C/xampp/htdocs/lavina_erp/app/Http/Controllers/ChartController.php",
+		"/C/xampp/htdocs/lavina_erp/app/Http/Controllers/ProductionController.php",
+		"/C/xampp/htdocs/lavina_erp/database/migrations/2016_11_22_051212_create_order_details_table.php",
+		"/C/xampp/htdocs/lavina_erp/database/migrations/2016_09_19_104036_create_orders_table.php",
+		"/C/xampp/htdocs/lavina_erp/resources/views/bowner/humans/create.blade.php",
+		"/C/xampp/htdocs/lavina_erp/resources/views/layouts/bowner.blade.php",
+		"/C/xampp/htdocs/lavina_erp/resources/views/layouts/admin.blade.php",
+		"/C/xampp/htdocs/lavina_erp/resources/views/bowner/production/print.blade.php",
+		"/C/xampp/htdocs/lavina_erp/resources/views/orders/print.blade.php",
+		"/C/xampp/htdocs/lavina_erp/app/Http/Controllers/InventoryController.php",
+		"/C/xampp/htdocs/lavina_erp/resources/views/bowner/inventories/material/edit.blade.php",
+		"/C/xampp/htdocs/lavina_erp/resources/views/bowner/inventories/product/edit.blade.php",
+		"/C/xampp/htdocs/lavina_erp/resources/views/bowner/production/index-ori.blade.php",
+		"/C/xampp/htdocs/lavina_erp/resources/views/orders/edit-ori.blade.php",
+		"/C/xampp/htdocs/lavina_erp/resources/views/orders/edit-ỏi.blade.php",
+		"/C/xampp/htdocs/lavina_erp/app/Http/Controllers/OrderController-ori.php",
+		"/C/xampp/htdocs/lavina_erp/app/Http/Controllers/OrderDetailController.php",
+		"/C/xampp/htdocs/lavina_erp/app/Http/Controllers/BownerSalariesController.php",
+		"/C/xampp/htdocs/lavina_erp/app/Http/Controllers/BownerHumansController.php",
+		"/C/xampp/htdocs/lavina_erp/app/Human.php",
+		"/C/xampp/htdocs/lavina_erp/app/User.php",
+		"/C/xampp/htdocs/lavina_erp/database/seeds/UsersTableSeeder.php",
+		"/C/xampp/htdocs/lavina_erp/database/migrations/2014_10_12_000000_create_users_table.php",
+		"/E/Desktop/index.blade.php",
+		"/C/xampp/htdocs/lavina_erp/database/seeds/LeaveTableSeeder.php",
+		"/C/xampp/htdocs/lavina_erp/database/seeds/DatabaseSeeder.php",
+		"/C/xampp/htdocs/lavina_erp/database/seeds/HumanTableSeeder.php",
+		"/C/xampp/htdocs/lavina_erp/database/migrations/2016_09_09_095707_create_leaves_table.php",
+		"/C/xampp/htdocs/lavina_erp/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php",
+		"/C/xampp/htdocs/lavina_erp/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/HasMany.php",
+		"/C/xampp/htdocs/lavina_erp/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/HasOneOrMany.php",
+		"/C/xampp/htdocs/lavina_erp/app/Order.php",
+		"/C/xampp/htdocs/lavina_erp/.env",
+		"/C/xampp/htdocs/lavina_erp/database/migrations/2016_09_24_151401_create_suppliers_table.php",
+		"/C/xampp/htdocs/lavina_erp/resources/views/orders/index-ori.blade.php",
+		"/C/xampp/htdocs/lavina_erp/index.php",
+		"/C/xampp/htdocs/lavina_erp/vendor/laravelcollective/html/src/HtmlServiceProvider.php",
+		"/C/xampp/htdocs/lavina_erp/vendor/laravelcollective/html/src/FormFacade.php",
+		"/C/xampp/htdocs/lavina_erp/resources/views/bowner/inventories/purchase/index.blade.php",
+		"/C/xampp/htdocs/lavina_erp/app/Http/Controllers/MaterialPurchaseController.php",
+		"/C/xampp/htdocs/lavina_erp/app/OrderDetail.php",
 		"/C/xampp/htdocs/lavina_erp/app/Http/Requests/HumanRequest.php",
+		"/C/xampp/htdocs/lavina_erp/app/Http/Controllers/AdminUsersController.php",
+		"/C/xampp/htdocs/lavina_erp/resources/lang/en/validation.php",
 		"/C/xampp/htdocs/lavina_erp/app/Http/Requests/CustomerRequest.php",
 		"/C/xampp/htdocs/lavina_erp/app/Http/Controllers/SupplierController.php",
-		"/C/xampp/htdocs/lavina_erp/app/Http/Controllers/AdminUsersController.php",
 		"/C/xampp/htdocs/lavina_erp/app/Http/Controllers/Controller.php",
 		"/C/xampp/htdocs/lavina_erp/resources/views/bowner/supplier/create.blade.php",
 		"/C/xampp/htdocs/lavina_erp/resources/views/bowner/supplier/edit.blade.php",
 		"/C/xampp/htdocs/lavina_erp/app/Http/Controllers/CustomerController.php",
-		"/C/xampp/htdocs/lavina_erp/app/Http/Controllers/BownerHumansController.php",
-		"/C/xampp/htdocs/lavina_erp/resources/views/layouts/bowner.blade.php",
-		"/C/xampp/htdocs/lavina_erp/app/Http/Controllers/OrderController.php",
-		"/C/xampp/htdocs/lavina_erp/resources/views/orders/index.blade.php",
 		"/C/xampp/htdocs/lavina_erp/resources/views/bowner/humans/edit.blade.php",
-		"/C/xampp/htdocs/lavina_erp/resources/views/bowner/humans/create.blade.php",
 		"/C/xampp/htdocs/lavina_erp/resources/views/bowner/customer/edit.blade.php",
 		"/C/xampp/htdocs/lavina_erp/resources/views/bowner/customer/create.blade.php",
 		"/C/xampp/htdocs/lavina_erp/resources/views/includes/form_error.blade.php",
 		"/C/xampp/htdocs/lavina_erp/database/migrations/2016_08_25_085612_create_humans_table.php",
 		"/C/xampp/htdocs/lavina_erp/vendor/laravel/framework/src/Illuminate/Routing/Controller.php",
 		"/C/xampp/htdocs/lavina_erp/vendor/laravel/framework/src/Illuminate/Foundation/Validation/ValidatesRequests.php",
-		"/C/xampp/htdocs/lavina_erp/resources/views/bowner/inventories/purchase/create.blade.php",
-		"/C/xampp/htdocs/lavina_erp/app/Http/Controllers/MaterialPurchaseController.php",
 		"/C/xampp/htdocs/lavina_erp/public/css/libsstyle.css",
 		"/C/xampp/htdocs/lavina_erp/resources/views/bowner/humans/index.blade.php",
-		"/C/xampp/htdocs/lavina_erp/resources/views/orders/print.blade.php",
-		"/C/xampp/htdocs/lavina_erp/resources/views/bowner/inventories/purchase/index.blade.php",
-		"/C/xampp/htdocs/lavina_erp/app/Http/Controllers/ChartController.php",
-		"/C/xampp/htdocs/lavina_erp/resources/views/bowner/chart/index.blade.php",
 		"/C/xampp/htdocs/lavina_erp/app/Http/Controllers/ChartController_order.php",
 		"/C/xampp/htdocs/lavina_erp/resources/views/bowner/customer/index.blade.php",
-		"/C/xampp/htdocs/lavina_erp/app/Human.php",
-		"/C/xampp/htdocs/lavina_erp/database/seeds/HumanTableSeeder.php",
-		"/C/xampp/htdocs/lavina_erp/database/migrations/2016_09_19_104036_create_orders_table.php",
-		"/C/xampp/htdocs/lavina_erp/app/Http/Controllers/InventoryController.php",
-		"/C/xampp/htdocs/lavina_erp/resources/views/orders/edit.blade.php",
-		"/C/xampp/htdocs/lavina_erp/app/Http/Controllers/BownerSalariesController.php",
-		"/C/xampp/htdocs/lavina_erp/database/migrations/2014_10_12_000000_create_users_table.php",
 		"/C/xampp/htdocs/lavina_erp/app/Product.php",
 		"/C/xampp/htdocs/lavina_erp/resources/views/admin/users/edit.blade.php",
 		"/C/xampp/htdocs/lavina_erp/resources/views/admin/users/create.blade.php",
-		"/C/xampp/htdocs/lavina_erp/app/Order.php",
-		"/C/xampp/htdocs/lavina_erp/database/seeds/UsersTableSeeder.php",
 		"/C/xampp/htdocs/lavina_erp/resources/views/layouts/app.blade.php",
 		"/C/xampp/htdocs/lavina_erp/config/app.php",
 		"/C/xampp/htdocs/lavina_erp/resources/views/auth/login.blade.php",
 		"/C/xampp/htdocs/lavina_erp/resources/views/bowner/salaries/index.blade.php",
-		"/C/xampp/htdocs/lavina_erp/resources/views/bowner/inventories/product/edit.blade.php",
 		"/C/xampp/htdocs/lavina_erp/resources/views/bowner/leaves/edit.blade.php",
 		"/C/xampp/htdocs/lavina_erp/database/seeds/MaterialTableSeeder.php",
 		"/C/xampp/htdocs/lavina_erp/database/seeds/ProductTableSeeder.php",
 		"/C/xampp/htdocs/lavina_erp/database/migrations/2016_09_21_141501_create_materials_table.php",
 		"/C/xampp/htdocs/lavina_erp/database/migrations/2016_09_19_105401_create_products_table.php",
-		"/C/xampp/htdocs/lavina_erp/database/migrations/2016_09_09_095707_create_leaves_table.php",
 		"/C/xampp/htdocs/lavina_erp/database/migrations/2016_09_24_151342_create_purchases_table.php",
 		"/C/xampp/htdocs/lavina_erp/database/migrations/2016_09_20_071642_create_units_table.php",
-		"/C/xampp/htdocs/lavina_erp/database/migrations/2016_09_24_151401_create_suppliers_table.php",
 		"/C/xampp/htdocs/lavina_erp/database/migrations/2016_09_19_105348_create_customers_table.php",
 		"/C/xampp/htdocs/lavina_erp/database/migrations/2016_08_12_064435_add_photo_id_to_users.php",
 		"/C/xampp/htdocs/lavina_erp/public/css/style.css",
-		"/C/xampp/htdocs/lavina_erp/resources/views/layouts/admin.blade.php",
-		"/C/xampp/htdocs/lavina_erp/app/User.php",
-		"/C/xampp/htdocs/lavina_erp/resources/views/bowner/inventories/material/edit.blade.php",
 		"/C/xampp/htdocs/lavina_erp/resources/views/bowner/leaves/index.blade.php",
 		"/C/xampp/htdocs/lavina_erp/routes/web.php",
 		"/C/xampp/htdocs/lavina_erp/resources/views/bowner/salaries/edit.blade.php",
 		"/C/xampp/htdocs/lavina_erp/app/Http/Controllers/LeavesController.php",
 		"/C/xampp/htdocs/lavina_erp/app/Leave.php",
-		"/C/xampp/htdocs/lavina_erp/database/seeds/DatabaseSeeder.php",
 		"/C/xampp/htdocs/lavina_erp/app/Http/Controllers/Auth/LoginController.php",
 		"/C/xampp/htdocs/lavina_erp/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php",
 		"/C/xampp/htdocs/lavina_erp/resources/views/auth/login_origin.blade.php",
@@ -735,19 +773,15 @@
 		"/C/xampp/htdocs/lavina_erp/app/Http/Middleware/BownerManager.php",
 		"/C/xampp/htdocs/lavina_erp/app/Http/Kernel.php",
 		"/C/xampp/htdocs/lavina_erp/public/css/appstyle.css",
-		"/C/xampp/htdocs/lavina_erp/app/Http/Controllers/ProductionController.php",
 		"/C/xampp/htdocs/lavina_erp/resources/views/bowner/chart/data/DailyByProduct",
 		"/C/xampp/htdocs/lavina_erp/database/migrations/2016_11_15_113424_create_productions_table.php",
 		"/C/xampp/htdocs/lavina_erp/database/seeds/UnitTableSeeder.php",
-		"/C/xampp/htdocs/lavina_erp/resources/views/bowner/inventories/purchase/edit.blade.php",
 		"/C/xampp/htdocs/lavina_erp/database/migrations/2016_08_30_103456_create_salaries_table.php",
-		"/C/xampp/htdocs/lavina_erp/resources/views/bowner/production/print.blade.php",
 		"/C/xampp/htdocs/lavina_erp/resources/views/bowner/inventories/index.blade.php",
 		"/C/xampp/htdocs/lavina_erp/resources/views/home.blade.php",
 		"/C/xampp/htdocs/lavina_erp/resources/views/welcome.blade.php",
 		"/C/xampp/htdocs/lavina_erp/resources/views/admin/users/index.blade.php",
 		"/C/xampp/htdocs/lavina_erp/vendor/laravel/framework/src/Illuminate/Support/MessageBag.php",
-		"/C/xampp/htdocs/lavina_erp/vendor/laravelcollective/html/src/HtmlServiceProvider.php",
 		"/C/xampp/htdocs/lavina_erp/composer.json",
 		"/C/xampp/htdocs/lavina_erp/database/migrations/2016_09_09_094651_add_leaves_to_humans_table.php",
 		"/C/xampp/htdocs/lavina_erp/database/migrations/2016_08_12_091028_create_photos_table.php",
@@ -757,30 +791,13 @@
 		"/C/xampp/htdocs/lavina_erp/database/seeds/RolesTableSeeder.php",
 		"/C/xampp/htdocs/lavina_erp/database/seeds/SupplierTableSeeder.php",
 		"/C/xampp/htdocs/lavina_erp/database/seeds/CustomerTableSeeder.php",
-		"/C/xampp/htdocs/lavina_erp/.env",
 		"/C/xampp/htdocs/lavina_erp/app/Http/Middleware/Employee.php",
 		"/C/xampp/htdocs/angular2-recipe-book/src/app/recipes/recipes.component.ts",
 		"/C/xampp/htdocs/angular2-recipe-book/src/app/recipes/recipes.component.html",
 		"/C/xampp/htdocs/angular2-recipe-book/node_modules/@angular/router/src/router_module.js",
 		"/C/xampp/htdocs/angular2-recipe-book/src/app/app.routes.ts",
 		"/C/xampp/htdocs/angular2-recipe-book/src/app/shopping-list/shopping-list.component.ts",
-		"/C/xampp/htdocs/angular2-recipe-book/src/app/dropdown.directive.ts",
-		"/C/xampp/htdocs/angular2-recipe-book/src/app/recipes/recipe.service.ts",
-		"/C/xampp/htdocs/angular2-recipe-book/src/app/recipes/recipe-detail/recipe-detail.component.html",
-		"/C/xampp/htdocs/angular2-recipe-book/src/app/header.component.html",
-		"/C/xampp/htdocs/angular2-recipe-book/src/app/shopping-list/shopping-list.component.html",
-		"/C/xampp/htdocs/angular2-recipe-book/src/app/app.component.html",
-		"/C/xampp/htdocs/angular2-recipe-book/src/app/recipes/recipe-list/recipe-list.component.ts",
-		"/C/xampp/htdocs/angular2-recipe-book/src/app/recipes/recipe-detail/recipe-detail.component.ts",
-		"/C/xampp/htdocs/angular2-recipe-book/src/app/recipes/recipe-list/recipe-item.component.ts",
-		"/C/xampp/htdocs/angular2-recipe-book/src/app/shopping-list/shopping-list.service.ts",
-		"/C/xampp/htdocs/angular2-recipe-book/src/app/app.component.ts",
-		"/C/xampp/htdocs/angular2-recipe-book/src/app/recipes/recipe-list/recipe-list.component.html",
-		"/C/xampp/htdocs/angular2-recipe-book/src/app/shopping-list/shopping-list-add.component.ts",
-		"/C/xampp/htdocs/angular2-recipe-book/src/app/shopping-list/shopping-list-add.component.html",
-		"/C/xampp/htdocs/angular2-recipe-book/src/app/app.module.ts",
-		"/C/xampp/htdocs/angular2-recipe-book/src/app/recipes/recipe.ts",
-		"/C/xampp/htdocs/angular2-recipe-book/src/app/shared/ingredient.ts"
+		"/C/xampp/htdocs/angular2-recipe-book/src/app/dropdown.directive.ts"
 	],
 	"find":
 	{
@@ -798,6 +815,35 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"event",
+			"selectedValue",
+			"selected",
+			"alert",
+			"order",
+			"selectedValue",
+			"\t    \t\n",
+			"quantity",
+			"a",
+			"order",
+			"Order",
+			"order",
+			"Order",
+			"order",
+			"></",
+			"h5",
+			"h4",
+			"> ",
+			"inventory",
+			"submit",
+			"leave1",
+			"human3",
+			"human2",
+			"human1",
+			"user",
+			"User",
+			"user1",
+			"product",
+			"\">\n",
 			"orders.complete",
 			"a",
 			"allData",
@@ -896,36 +942,7 @@
 			"quantity",
 			"p_qty",
 			"quantity",
-			"material",
-			"name",
-			"product",
-			"Product",
-			"product",
-			"material",
-			"product",
-			"Product",
-			"product",
-			"Product",
-			"product",
-			"Product",
-			"product",
-			"Create",
-			"create",
-			"view",
-			"order",
-			"uom_id",
-			"uom",
-			"UOM",
-			"uom",
-			"UOM",
-			";\n",
-			"sale",
-			"salary",
-			"deleted_salary",
-			">\n",
-			"salary",
-			"Salary",
-			"salary"
+			"material"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -943,7 +960,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -952,15 +969,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5015,
+						"buffer_size": 5023,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								946,
-								946
+								3413,
+								3413
 							]
 						],
 						"settings":
@@ -969,67 +986,93 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 442.0,
+						"translation.y": 2227.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "app/Http/Requests/HumanRequest.php",
+					"file": "resources/views/orders/index.blade.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1015,
+						"buffer_size": 9640,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								878,
-								878
+								8254,
+								8254
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1153.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "resources/views/bowner/chart/index.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8694,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7670,
+								7675
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 4973.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "app/Http/Controllers/AdminUsersController.php",
+					"buffer": 3,
+					"file": "resources/views/bowner/salaries/index.blade.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3970,
+						"buffer_size": 3424,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2981,
-								2981
+								1640,
+								1640
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1785.0,
+						"translation.y": 612.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1038,24 +1081,53 @@
 			]
 		},
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
-					"buffer": 3,
-					"file": "app/Http/Controllers/BownerHumansController.php",
-					"semi_transient": true,
+					"buffer": 4,
+					"file": "resources/views/orders/edit.blade.php",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4304,
+						"buffer_size": 7857,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								625,
-								625
+								3260,
+								3260
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1690.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/Http/Controllers/ProductionController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2288,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								153,
+								153
 							]
 						],
 						"settings":
@@ -1065,10 +1137,40 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 714.0,
+						"translation.y": 102.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "bootstrap/cache/config.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 10648,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5691,
+								5691
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3315.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -1190,7 +1292,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 341.0,
+	"side_bar_width": 319.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

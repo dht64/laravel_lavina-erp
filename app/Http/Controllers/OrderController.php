@@ -34,17 +34,6 @@ class OrderController extends Controller
         $products = Product::pluck('name', 'id')->all();
         $customers = Customer::all();
 
-        $ordersSubmitted = Order::where('submit', 1)->where('status', 0)->get();
-        foreach ($ordersSubmitted as $order) {
-            $order->stock = 1;
-            foreach ($order->orderdetail()->get() as $detail) {
-                if ($detail->quantity > $detail->product->quantity) {
-                    $order->stock = 0;
-                }
-            }
-            $order->save();
-        }
-
         $orders = Order::orderBy('created_at', 'asc')->paginate(10);
 
         return view('orders.index', compact('orders', 'products', 'customers'));
@@ -70,16 +59,13 @@ class OrderController extends Controller
     {
         $order = new Order();
 
-        $this->validate($request, [
-            'products' => 'distinct',
-        ]);
-
         $order->customer_id = $request['customer'];
         $order->user_id = Auth::user()->id;
         $order->vat = $request['vat'];
         $order->note = $request['note'];
         //$order->delivery_at = date("Y-m-d", strtotime($request['delivery_at'] . "+1 day"));
         $order->delivery_at = date("Y-m-d", strtotime($request['delivery_at'] ));
+        
         $order->save();
 
         // Filter empty array elements
@@ -104,6 +90,7 @@ class OrderController extends Controller
         }
 
         $order->total_cost = $total_cost_order;
+
         $order->save();
 
         Session::flash('created_message', 'The order has been created!');
@@ -153,7 +140,6 @@ class OrderController extends Controller
     {
         //
         $order = Order::findOrFail($id);
-
         $order->customer_id = $request['customer'];
         $order->user_id = Auth::user()->id;
         $order->vat = $request['vat'];

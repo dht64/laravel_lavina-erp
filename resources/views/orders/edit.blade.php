@@ -1,4 +1,4 @@
-@extends('layouts.bowner')
+ @extends('layouts.bowner')
 
 @section('content')
 
@@ -28,7 +28,9 @@
 			        <th>Price/UOM</th>
 			        <th>UOM</th>
 			        <th>Quantity</th>
-			        <th>Stock</th>
+			        @if (!$order->deliver)
+				        <th>Stock</th>
+			        @endif
 			        <th>VAT (5%)</th>
 			        <th>Price ($)</th>
 			        <th>Status</th>
@@ -45,20 +47,30 @@
 						<td>{{ $detail->product->cost }}</td>
 						<td>{{ $detail->product->unit->name }}</td>
 						<td>{{ $detail->quantity }}</td>
-						<td>{{ $detail->product->quantity }}</td>
+						@if (!$order->deliver)
+							<td>{{ $detail->product->quantity }}</td>
+						@endif
 						<td>{{ $order->vat ? 'Yes' : 'No' }}</td>
 						<td>{{ $detail->total_cost }}</td>
 					@if ($order->submit == 0) 
 						<td>Waiting for submission</td>
+					@elseif ($order->status == 1)
+						<td class="success">Completed <span class="text-success glyphicon glyphicon-ok"></span></td>
 					@elseif (($order->deliver == 0) && ($detail->product->quantity < $detail->quantity))
 						<td style="background-color: #ffffe6;"><b>Not enough stock</b></td>
-					@elseif (($order->deliver == 0) && ($detail->product->quantity >= $detail->quantity)) 
+					@elseif ($order->deliver == 0) 
 						<td>Ready for delivery</td>
+					@else
+						<td>Waiting for delivery</td>
 					@endif
 					</tr>
 				@endforeach
 					<tr>	
+						@if ($order->deliver)
+						<td colspan="4"></td>
+						@else
 						<td colspan="5"></td>
+						@endif
 						<td colspan="2">Total Price:</td>
 						<td>{{ $order->total_cost}}</td>
 						<td></td>

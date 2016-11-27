@@ -34,7 +34,17 @@
 			      </tr>
 			    </thead>
 			    <tbody>
-					@foreach ($orders as $order)
+				@foreach ($orders as $order)
+					@php
+						$stock = 1;
+					@endphp
+					@foreach ($order->orderdetail()->get() as $detail)
+						@if ($detail->quantity > $detail->product->quantity)
+							@php
+								$stock = 0;
+							@endphp
+						@endif
+					@endforeach
 					  <tr>
 						<td>{{ $order->id }}</td>
 						<td>
@@ -65,7 +75,7 @@
 						<td>Waiting for submission</td>
 					@elseif ($order->status == 1)
 						<td class="success">Completed <span class="text-success glyphicon glyphicon-ok"></span></td>
-					@elseif ($order->deliver == 0 && $order->stock == 0)
+					@elseif ($order->deliver == 0 && $stock == 0)
 						<td style="background-color: #ffffe6;"><b>Not enough stock</b></td>
 					@elseif (($order->deliver == 0) && (Auth::user()->isBowner())) 
 						<td><a href="{{ route('bowner.orders.deliver', $order->id) }}" class="btn btn-xs btn-block btn-pink">Submit for delivery</a></td>
@@ -79,8 +89,8 @@
 						<td>{{ $order->updated_at->diffForHumans() }}</td>
 						<td>{{ date("d-m-Y", strtotime($order->delivery_at)) }}</td>
 						<td>{{ $order->note }}</td>
-					  </tr>
-					@endforeach
+					</tr>
+				@endforeach
 			    </tbody>
 		  	</table>
 		  	</div>

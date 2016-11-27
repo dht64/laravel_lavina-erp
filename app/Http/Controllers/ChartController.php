@@ -179,12 +179,11 @@ class ChartController extends Controller
                   }
               }
         }
-
         // MERGE DATA
         // Add this month to $orderMonthly if not exist
         $thisMonth = date("Y-m");
         $newOrder['date'] = $thisMonth;
-        if ($orderMonthly[0]['date'] != $thisMonth) {
+        if ( !array_key_exists('date', $orderMonthly) || $orderMonthly[0]['date'] != $thisMonth) {
             array_unshift($orderMonthly, $newOrder);
         }
 

@@ -22,8 +22,7 @@ class CreateOrdersTable extends Migration
             $table->boolean('status')->default(0);
             $table->boolean('submit')->default(0);
             $table->boolean('deliver')->default(0);
-            $table->boolean('stock')->default(0);
-            $table->timestamp('delivery_at');
+            $table->date('delivery_at');
             $table->timestamps();
             $table->softDeletes();
         });

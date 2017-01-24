@@ -81,8 +81,9 @@ class OrderController extends Controller
             $vat_rate = Product::where('id', $product)->value('vat_rate');
             if ($order->vat) {
                 $total_cost = ($cost * $quantity) + ( $cost * $quantity * $vat_rate / 100 );
-            }
-            $total_cost = $cost * $quantity;
+            } else {
+                $total_cost = $cost * $quantity;
+              }
             $total_cost_order += $total_cost;
             $orderDetail->total_cost = $total_cost;
             $orderDetail->order_id = $order->id;

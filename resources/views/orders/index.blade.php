@@ -228,12 +228,11 @@
 		function checkSelected() {
 			$selected = $("select.product");
 			console.log("select length: " + $selected.length);
-			for (i = 0; i < $selected.length
-				; i++) {
+			for (i = 0; i < $selected.length; i++) {
 				flag = 0;
 				thisSelect = $selected[i].value;
 				console.log("current select: " + thisSelect);
-				if (thisSelect == "") { continue; }
+				if (thisSelect === "") { continue; }
 				$selected.not($selected[i]).each(function() {
 					console.log("value check: " + this.value);
 					if (this.value == thisSelect) {
@@ -244,11 +243,11 @@
 				}); // /.each
 				if (flag == 1) { break; }
 			} // /for
-			if (flag == 0) {
+			if (flag === 0) {
 				$(".myalert").hide();
 				$submitBut.prop("disabled", false);
 			}	
-		};
+		}
 
 		// Click remove button 
 		$cloneParent.on('click', 'a.btn.remove', function(e) {

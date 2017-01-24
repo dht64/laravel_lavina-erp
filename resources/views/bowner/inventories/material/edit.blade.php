@@ -12,8 +12,8 @@
 	</div>	
 
 	<div class="form-group col-sm-6">
-		{!! Form::label('quantity', 'Available Quantity:') !!}
-		{!! Form::number('quantity', null, ['class'=>'form-control', 'min'=>0]) !!}
+		{!! Form::label('quantity', 'Available Quantity (*):') !!}
+		{!! Form::number('quantity', null, ['class'=>'form-control', 'min'=>0, 'required']) !!}
 	</div>
 
 	<div class="form-group col-sm-6">

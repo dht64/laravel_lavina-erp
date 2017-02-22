@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"sli",
+				"slideUp\t.slideUp()"
+			],
+			[
+				"addre",
+				"address2"
+			],
+			[
 				"ajax",
 				"ajax\t$.ajax()"
 			],
@@ -506,34 +514,17 @@
 			[
 				"fu",
 				"function"
-			],
-			[
-				"mess",
-				"messageService"
-			],
-			[
-				"Message",
-				"MessageService"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "routes/web.php",
+			"file": "readme.md",
 			"settings":
 			{
-				"buffer_size": 5023,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "resources/views/bowner/customer/edit.blade.php",
-			"settings":
-			{
-				"buffer_size": 1675,
-				"line_ending": "Windows"
+				"buffer_size": 1203,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -545,9 +536,13 @@
 	"command_palette":
 	{
 		"height": 392.0,
-		"last_filter": "inst",
+		"last_filter": "package",
 		"selected_items":
 		[
+			[
+				"package",
+				"Package Control: Install Package"
+			],
 			[
 				"inst",
 				"Package Control: Install Package"
@@ -559,10 +554,6 @@
 			[
 				"ins",
 				"Package Control: Install Package"
-			],
-			[
-				"package",
-				"Package Control: Remove Package"
 			],
 			[
 				"Snippet: ",
@@ -589,7 +580,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 411.0
+		"width": 528.0
 	},
 	"console":
 	{
@@ -613,15 +604,29 @@
 		"/C/xampp/htdocs/lavina_erp",
 		"/C/xampp/htdocs/lavina_erp/resources",
 		"/C/xampp/htdocs/lavina_erp/resources/views",
-		"/C/xampp/htdocs/lavina_erp/resources/views/bowner",
-		"/C/xampp/htdocs/lavina_erp/resources/views/bowner/customer"
+		"/C/xampp/htdocs/lavina_erp/resources/views/admin",
+		"/C/xampp/htdocs/lavina_erp/resources/views/admin/users",
+		"/C/xampp/htdocs/lavina_erp/resources/views/includes",
+		"/C/xampp/htdocs/lavina_erp/routes"
 	],
 	"file_history":
 	[
+		"/C/xampp/htdocs/lavina_erp/app/Http/Controllers/SupplierController.php",
+		"/C/xampp/htdocs/lavina_erp/resources/views/admin/users/edit.blade.php",
+		"/C/xampp/htdocs/lavina_erp/resources/views/includes/form_error.blade.php",
+		"/C/xampp/htdocs/lavina_erp/resources/views/includes/message.blade.php",
+		"/C/xampp/htdocs/lavina_erp/resources/views/layouts/bowner.blade.php",
+		"/C/xampp/htdocs/lavina_erp/app/Supplier.php",
+		"/C/xampp/htdocs/lavina_erp/public/css/libs.css",
+		"/C/xampp/htdocs/lavina_erp/public/css/libsstyle.css",
+		"/C/xampp/htdocs/lavina_erp/app/Http/Controllers/ChartController.php",
+		"/C/xampp/htdocs/lavina_erp/routes/web.php",
+		"/C/Users/huutung/AppData/Roaming/Sublime Text 3/Packages/User/PHP Companion.sublime-settings",
+		"/C/Users/huutung/AppData/Roaming/Sublime Text 3/Packages/PHP Companion/PHP Companion.sublime-settings",
+		"/C/xampp/htdocs/lavina_erp/readme.md",
 		"/C/xampp/htdocs/lavina_erp/resources/views/orders/index.blade.php",
 		"/C/Users/huutung/AppData/Roaming/Sublime Text 3/Packages/User/mydiv.sublime-snippet",
 		"/C/Users/huutung/AppData/Roaming/Sublime Text 3/Packages/User/new-curly-line.sublime-macro",
-		"/C/xampp/htdocs/lavina_erp/app/Http/Controllers/ChartController.php",
 		"/C/xampp/htdocs/lavina_erp/resources/views/bowner/inventories/purchase/edit.blade.php",
 		"/C/xampp/htdocs/lavina_erp/resources/views/bowner/inventories/product/edit.blade.php",
 		"/C/xampp/htdocs/lavina_erp/resources/views/bowner/inventories/material/edit.blade.php",
@@ -642,7 +647,6 @@
 		"/C/xampp/htdocs/lavina_erp/resources/views/bowner/inventories/purchase/create.blade.php",
 		"/C/xampp/htdocs/lavina_erp/database/migrations/2016_11_22_051212_create_order_details_table.php",
 		"/C/xampp/htdocs/lavina_erp/resources/views/bowner/humans/create.blade.php",
-		"/C/xampp/htdocs/lavina_erp/resources/views/layouts/bowner.blade.php",
 		"/C/xampp/htdocs/lavina_erp/resources/views/layouts/admin.blade.php",
 		"/C/xampp/htdocs/lavina_erp/resources/views/bowner/production/print.blade.php",
 		"/C/xampp/htdocs/lavina_erp/resources/views/orders/print.blade.php",
@@ -679,7 +683,6 @@
 		"/C/xampp/htdocs/lavina_erp/app/Http/Controllers/AdminUsersController.php",
 		"/C/xampp/htdocs/lavina_erp/resources/lang/en/validation.php",
 		"/C/xampp/htdocs/lavina_erp/app/Http/Requests/CustomerRequest.php",
-		"/C/xampp/htdocs/lavina_erp/app/Http/Controllers/SupplierController.php",
 		"/C/xampp/htdocs/lavina_erp/app/Http/Controllers/Controller.php",
 		"/C/xampp/htdocs/lavina_erp/resources/views/bowner/supplier/create.blade.php",
 		"/C/xampp/htdocs/lavina_erp/resources/views/bowner/supplier/edit.blade.php",
@@ -687,16 +690,13 @@
 		"/C/xampp/htdocs/lavina_erp/resources/views/bowner/humans/edit.blade.php",
 		"/C/xampp/htdocs/lavina_erp/resources/views/bowner/customer/edit.blade.php",
 		"/C/xampp/htdocs/lavina_erp/resources/views/bowner/customer/create.blade.php",
-		"/C/xampp/htdocs/lavina_erp/resources/views/includes/form_error.blade.php",
 		"/C/xampp/htdocs/lavina_erp/database/migrations/2016_08_25_085612_create_humans_table.php",
 		"/C/xampp/htdocs/lavina_erp/vendor/laravel/framework/src/Illuminate/Routing/Controller.php",
 		"/C/xampp/htdocs/lavina_erp/vendor/laravel/framework/src/Illuminate/Foundation/Validation/ValidatesRequests.php",
-		"/C/xampp/htdocs/lavina_erp/public/css/libsstyle.css",
 		"/C/xampp/htdocs/lavina_erp/resources/views/bowner/humans/index.blade.php",
 		"/C/xampp/htdocs/lavina_erp/app/Http/Controllers/ChartController_order.php",
 		"/C/xampp/htdocs/lavina_erp/resources/views/bowner/customer/index.blade.php",
 		"/C/xampp/htdocs/lavina_erp/app/Product.php",
-		"/C/xampp/htdocs/lavina_erp/resources/views/admin/users/edit.blade.php",
 		"/C/xampp/htdocs/lavina_erp/resources/views/admin/users/create.blade.php",
 		"/C/xampp/htdocs/lavina_erp/resources/views/layouts/app.blade.php",
 		"/C/xampp/htdocs/lavina_erp/resources/views/bowner/leaves/edit.blade.php",
@@ -710,7 +710,6 @@
 		"/C/xampp/htdocs/lavina_erp/database/migrations/2016_08_12_064435_add_photo_id_to_users.php",
 		"/C/xampp/htdocs/lavina_erp/public/css/style.css",
 		"/C/xampp/htdocs/lavina_erp/resources/views/bowner/leaves/index.blade.php",
-		"/C/xampp/htdocs/lavina_erp/routes/web.php",
 		"/C/xampp/htdocs/lavina_erp/resources/views/bowner/salaries/edit.blade.php",
 		"/C/xampp/htdocs/lavina_erp/app/Http/Controllers/LeavesController.php",
 		"/C/xampp/htdocs/lavina_erp/app/Leave.php",
@@ -719,7 +718,6 @@
 		"/C/xampp/htdocs/lavina_erp/resources/views/auth/login_origin.blade.php",
 		"/C/xampp/htdocs/lavina_erp/app/Http/Controllers/HomeController.php",
 		"/C/xampp/htdocs/lavina_erp/resources/views/layouts/app_origin.blade.php",
-		"/C/xampp/htdocs/lavina_erp/resources/views/includes/message.blade.php",
 		"/C/xampp/htdocs/lavina_erp/app/Http/Middleware/Authenticate.php",
 		"/C/xampp/htdocs/lavina_erp/app/Http/Middleware/RedirectIfAuthenticated.php",
 		"/C/xampp/htdocs/lavina_erp/app/Http/Middleware/BownerEmployee.php",
@@ -740,12 +738,7 @@
 		"/C/xampp/htdocs/lavina_erp/database/migrations/2016_08_12_091028_create_photos_table.php",
 		"/C/xampp/htdocs/lavina_erp/app/Photo.php",
 		"/C/xampp/htdocs/lavina_erp/resources/views/admin/index.blade.php",
-		"/C/xampp/htdocs/lavina_erp/resources/views/welcome_ori.blade.php",
-		"/C/xampp/htdocs/lavina_erp/database/seeds/RolesTableSeeder.php",
-		"/C/xampp/htdocs/lavina_erp/database/seeds/SupplierTableSeeder.php",
-		"/C/xampp/htdocs/lavina_erp/database/seeds/CustomerTableSeeder.php",
-		"/C/xampp/htdocs/lavina_erp/app/Http/Middleware/Employee.php",
-		"/C/xampp/htdocs/angular2-recipe-book/src/app/recipes/recipes.component.ts"
+		"/C/xampp/htdocs/lavina_erp/resources/views/welcome_ori.blade.php"
 	],
 	"find":
 	{
@@ -763,6 +756,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"fade",
+			"message",
 			"stock",
 			"ordercontroller",
 			"1.1em",
@@ -888,9 +883,7 @@
 			"start_day",
 			"human",
 			"order",
-			"col",
-			"material",
-			"quantity"
+			"col"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -908,63 +901,33 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "routes/web.php",
+					"file": "readme.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5023,
+						"buffer_size": 1203,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6,
-								6
+								790,
+								687
 							]
 						],
 						"settings":
 						{
 							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai (SL).tmTheme",
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 102.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "resources/views/bowner/customer/edit.blade.php",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 1675,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1082,7 +1045,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 302.0,
+	"side_bar_width": 212.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

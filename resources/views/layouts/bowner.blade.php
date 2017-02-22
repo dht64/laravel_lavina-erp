@@ -240,11 +240,22 @@
     $(document).ready(function(){
         //CKEDITOR.replace('body');
 
-        // Fade in alert
-        $(".alert").addClass("in");
-
         // Initialize tooltip
         $('[data-toggle="tooltip"]').tooltip();
+
+        $alert = $(".alert-message");
+
+        if ($alert) {
+            // Fade in alert when closing
+            $alert.addClass("in");
+
+            // Set auto fadein
+            setTimeout(function(){
+                $alert.fadeTo("slow", 0.1).slideUp("slow", function() {
+                    $(this).remove();
+                });
+            }, 3000);
+        }
     });
 </script>
 

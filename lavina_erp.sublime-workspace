@@ -519,14 +519,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "readme.md",
-			"settings":
-			{
-				"buffer_size": 1203,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -536,12 +528,12 @@
 	"command_palette":
 	{
 		"height": 392.0,
-		"last_filter": "package",
+		"last_filter": "",
 		"selected_items":
 		[
 			[
 				"package",
-				"Package Control: Install Package"
+				"Package Control: Remove Package"
 			],
 			[
 				"inst",
@@ -601,16 +593,16 @@
 	},
 	"expanded_folders":
 	[
-		"/C/xampp/htdocs/lavina_erp",
-		"/C/xampp/htdocs/lavina_erp/resources",
-		"/C/xampp/htdocs/lavina_erp/resources/views",
-		"/C/xampp/htdocs/lavina_erp/resources/views/admin",
-		"/C/xampp/htdocs/lavina_erp/resources/views/admin/users",
-		"/C/xampp/htdocs/lavina_erp/resources/views/includes",
-		"/C/xampp/htdocs/lavina_erp/routes"
+		"/C/xampp/htdocs/lavina_erp"
 	],
 	"file_history":
 	[
+		"/C/xampp/htdocs/lavina_erp/routes/web.php",
+		"/E/Downloads 04 (2017)/Age of Empires 2/Age of Empires II/config.xml",
+		"/C/xampp/htdocs/lavina_erp/resources/views/bowner/inventories/purchase/index.blade.php",
+		"/C/xampp/htdocs/lavina_erp/app/Http/Controllers/MaterialPurchaseController.php",
+		"/E/Downloads 04 (2017)/Data Science and Machine Learning with Python - Hands On/DataScience/ConditionalProbabilityExercise.ipynb",
+		"/C/xampp/htdocs/lavina_erp/readme.md",
 		"/C/xampp/htdocs/lavina_erp/app/Http/Controllers/SupplierController.php",
 		"/C/xampp/htdocs/lavina_erp/resources/views/admin/users/edit.blade.php",
 		"/C/xampp/htdocs/lavina_erp/resources/views/includes/form_error.blade.php",
@@ -620,10 +612,8 @@
 		"/C/xampp/htdocs/lavina_erp/public/css/libs.css",
 		"/C/xampp/htdocs/lavina_erp/public/css/libsstyle.css",
 		"/C/xampp/htdocs/lavina_erp/app/Http/Controllers/ChartController.php",
-		"/C/xampp/htdocs/lavina_erp/routes/web.php",
 		"/C/Users/huutung/AppData/Roaming/Sublime Text 3/Packages/User/PHP Companion.sublime-settings",
 		"/C/Users/huutung/AppData/Roaming/Sublime Text 3/Packages/PHP Companion/PHP Companion.sublime-settings",
-		"/C/xampp/htdocs/lavina_erp/readme.md",
 		"/C/xampp/htdocs/lavina_erp/resources/views/orders/index.blade.php",
 		"/C/Users/huutung/AppData/Roaming/Sublime Text 3/Packages/User/mydiv.sublime-snippet",
 		"/C/Users/huutung/AppData/Roaming/Sublime Text 3/Packages/User/new-curly-line.sublime-macro",
@@ -676,8 +666,6 @@
 		"/C/xampp/htdocs/lavina_erp/index.php",
 		"/C/xampp/htdocs/lavina_erp/vendor/laravelcollective/html/src/HtmlServiceProvider.php",
 		"/C/xampp/htdocs/lavina_erp/vendor/laravelcollective/html/src/FormFacade.php",
-		"/C/xampp/htdocs/lavina_erp/resources/views/bowner/inventories/purchase/index.blade.php",
-		"/C/xampp/htdocs/lavina_erp/app/Http/Controllers/MaterialPurchaseController.php",
 		"/C/xampp/htdocs/lavina_erp/app/OrderDetail.php",
 		"/C/xampp/htdocs/lavina_erp/app/Http/Requests/HumanRequest.php",
 		"/C/xampp/htdocs/lavina_erp/app/Http/Controllers/AdminUsersController.php",
@@ -736,13 +724,11 @@
 		"/C/xampp/htdocs/lavina_erp/composer.json",
 		"/C/xampp/htdocs/lavina_erp/database/migrations/2016_09_09_094651_add_leaves_to_humans_table.php",
 		"/C/xampp/htdocs/lavina_erp/database/migrations/2016_08_12_091028_create_photos_table.php",
-		"/C/xampp/htdocs/lavina_erp/app/Photo.php",
-		"/C/xampp/htdocs/lavina_erp/resources/views/admin/index.blade.php",
-		"/C/xampp/htdocs/lavina_erp/resources/views/welcome_ori.blade.php"
+		"/C/xampp/htdocs/lavina_erp/app/Photo.php"
 	],
 	"find":
 	{
-		"height": 34.0
+		"height": 26.0
 	},
 	"find_in_files":
 	{
@@ -756,6 +742,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"print",
 			"fade",
 			"message",
 			"stock",
@@ -882,8 +869,7 @@
 			"age",
 			"start_day",
 			"human",
-			"order",
-			"col"
+			"order"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -901,44 +887,14 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "readme.md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1203,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								790,
-								687
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai (SL).tmTheme",
-							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 102.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 25.0
+		"height": 26.0
 	},
 	"input":
 	{
@@ -967,6 +923,10 @@
 		]
 	},
 	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
 	"output.find_results":
 	{
 		"height": 0.0
@@ -979,7 +939,7 @@
 	"project": "lavina_erp.sublime-project",
 	"replace":
 	{
-		"height": 46.0
+		"height": 48.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1045,7 +1005,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 212.0,
+	"side_bar_width": 220.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

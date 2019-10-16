@@ -23,3 +23,24 @@ A cool ERP application built on Laravel 5.4 framework.
 ![s3](https://c1.staticflickr.com/1/495/32456396256_97b318cf1b_c.jpg)
 
 ![s4](https://c1.staticflickr.com/1/583/32456396146_505a93ebd7_c.jpg)
+
+
+## <b>For Developer</b>
+
+### You need to install these list with composer
+##### /node_modules
+##### /public/storage
+##### /storage/*.key
+##### /vendor
+##### /.idea
+##### Homestead.json
+##### Homestead.yaml
+##### .env
+#### or copying from another installation and then run <i>composer update</i>
+
+### After migrating you can login as:
+##### admin -> for Admin
+##### business -> for Business Owner
+##### manager -> for Manager
+##### employee -> for Employee
+#### with password 12345678

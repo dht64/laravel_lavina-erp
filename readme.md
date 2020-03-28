@@ -40,7 +40,7 @@ A cool ERP application built on Laravel 5.4 framework.
 #### or just simply install all composer denpendencies by running <i>composer install</i>.
 
 ### Create a new .env file
-#### Could copy from existing .env.example file. Update relevant settings (DB_DATABASE, DB_USERNAME,...).
+#### Could copy from existing <i>.env.example</i> file. Update relevant settings (DB_DATABASE, DB_USERNAME,...).
 
 ### Generate an app encryption key
 #### Running <i>php artisan key:generate</i>.

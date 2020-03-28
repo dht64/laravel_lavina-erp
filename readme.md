@@ -27,7 +27,7 @@ A cool ERP application built on Laravel 5.4 framework.
 
 ## <b>For Developer</b>
 
-### You need to install these list with composer
+### Install these list with composer
 ##### /node_modules
 ##### /public/storage
 ##### /storage/*.key
@@ -37,8 +37,14 @@ A cool ERP application built on Laravel 5.4 framework.
 ##### Homestead.yaml
 ##### .env
 #### or copying from another installation and then run <i>composer update</i>
+#### or just simply install all composer denpendencies by running <i>composer install</i>
 
-### After migrating you can login as:
+### Create a new .env file (could copy from .env.example file). Update relevant settings (DB_DATABASE, DB_USERNAME,...)
+
+### Generate an app encryption key
+#### Running <i>php artisan key:generate</i>
+
+### Migrate the database. After migrating you can login as:
 ##### admin -> for Admin
 ##### business -> for Business Owner
 ##### manager -> for Manager

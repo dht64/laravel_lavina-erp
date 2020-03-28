@@ -36,13 +36,14 @@ A cool ERP application built on Laravel 5.4 framework.
 ##### Homestead.json
 ##### Homestead.yaml
 ##### .env
-#### or copying from another installation and then run <i>composer update</i>
-#### or just simply install all composer denpendencies by running <i>composer install</i>
+#### or copying from another installation and then run <i>composer update</i>.
+#### or just simply install all composer denpendencies by running <i>composer install</i>.
 
-### Create a new .env file (could copy from .env.example file). Update relevant settings (DB_DATABASE, DB_USERNAME,...)
+### Create a new .env file
+#### Could copy from existing .env.example file. Update relevant settings (DB_DATABASE, DB_USERNAME,...).
 
 ### Generate an app encryption key
-#### Running <i>php artisan key:generate</i>
+#### Running <i>php artisan key:generate</i>.
 
 ### Migrate the database. After migrating you can login as:
 ##### admin -> for Admin

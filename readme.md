@@ -45,9 +45,6 @@ A cool ERP application built on Laravel 5.4 framework.
 ### Generate an app encryption key
 #### Running <i>php artisan key:generate</i>.
 
-### Migrate the database. After migrating you can login as:
-##### admin -> for Admin
-##### business -> for Business Owner
-##### manager -> for Manager
-##### employee -> for Employee
-#### with password 12345678
+### Migrate the database. 
+
+### Running <i>php artisan db:seed</i>. to generate intial database info and enjoy exploring the app.

@@ -47,4 +47,5 @@ A cool ERP application built on Laravel 5.4 framework.
 
 ### Migrate the database. 
 
+### Seed intial database info.
 #### Running <i>php artisan db:seed</i>. to generate intial database info and enjoy exploring the app.
